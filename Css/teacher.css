@@ -1,0 +1,58 @@
+/*教师列表*/
+.by-add-teather{position:relative;background: #fff;overflow: hidden;}
+.by-add-teather .mui-card{margin-bottom:15px;overflow: visible;margin-right:24px;}
+.by-add-teather .mui-table-view-cell{padding:0;}
+.by-add-teather .mui-table-view-cell>a:not(.mui-btn){margin:0;padding-right:24px;}
+.by-add-teather .mui-media-object{max-width: inherit;}
+.by-add-teather .mui-media-body{height:101px;overflow: hidden;}
+.by-add-teather .mui-media-body .con{color:#777777;font-size:12px;line-height:21px;}
+.by-add-teather .mui-media-body .txt{color:#777777;font-size:12px;margin:0 10px;}
+
+.by-btn{font-size:12px;padding:3px 8px;margin-top:8px;margin-right:8px;}
+.by-btn.by-color-orange{color:#ffc30f;background: #fef8e0;border:1px solid #fef8e0;}
+.by-btn.by-color-blue{color:#1583cf;background: #e9f6ff;border:1px solid #e9f6ff;}
+
+.by-add-teather .add{z-index:9;position: absolute;display:block;width:28px;height:28px;right:-14px;top:50%;margin-top:-14px;border-radius:50%;overflow: hidden;}
+.by-add-teather .add img{position: absolute;top:0;left: 0;width:100%;height:100%;}
+.by-add-teather .label{display:block;}
+/*css3点击动画效果*/
+.by-add-teather .add .add-img{
+	opacity:1;filter:alpha(Opacity=80);-moz-opacity:1;
+	transform: rotate(-180deg);
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(-180deg);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transform: rotate(-180deg);
+	-moz-transition: all .5s ease-in-out;
+}
+.by-add-teather .add .remove-img{
+	opacity:0;filter:alpha(Opacity=80);-moz-opacity:1;
+	transform: rotate(-180deg);
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(-180deg);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transform: rotate(-180deg);
+	-moz-transition: all .5s ease-in-out;
+}
+.by-add-teather input:checked + .add .remove-img{
+	opacity: 1;
+	filter:alpha(Opacity=80);-moz-opacity:1;
+	transform: rotate(180deg);
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(180deg);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transform: rotate(180deg);
+	-moz-transition: all .5s ease-in-out;
+}
+.by-add-teather input:checked + .add .add-img{
+	opacity: 0;
+	filter:alpha(Opacity=80);-moz-opacity:0;
+	transform: rotate(180deg);
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(180deg);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transform: rotate(180deg);
+	-moz-transition: all .5s ease-in-out;
+}
+
+

@@ -1,0 +1,277 @@
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><title>
+    店长-集体课班级新建
+</title>
+    <!--common css-->
+    <link rel="stylesheet" href="../css/mui.min.css"><link rel="stylesheet" type="text/css" href="../css/app.css">
+    <!--独立 css-->
+    <link rel="stylesheet" type="text/css" href="../css/collectionclassadd.css"></head>
+<body class="mui-ios mui-ios-9 mui-ios-9-1 mui-fullscreen">
+<div class="mui-off-canvas-wrap mui-draggable mui-slide-in" data-offcanvas="5">
+    <!-- 菜单容器 -->
+    <aside id="my-student" class="by-detail-list mui-off-canvas-left">
+        <div class="mui-scroll-wrapper" data-scroll="1">
+            <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                <!-- 菜单具体展示内容 -->
+                <!-- 搜索 start-->
+                <div class="mui-input-row mui-search" style="margin: 15px 15px 0;">
+
+                    <input type="search" id="SrarchStudent" class="mui-input-clear" placeholder="" data-input-clear="6" data-input-search="6"><span class="mui-icon mui-icon-clear mui-hidden"></span><span class="mui-placeholder"><span class="mui-icon mui-icon-search"></span><span>搜索</span></span>
+                </div>
+                <!-- 搜索 end -->
+
+                <!--by-student-list start  -->
+                <ul class="by-student-list mui-table-view" id="Studentul">
+                    <!-- 说明:
+                    默认:男生图标
+                    女图标：添加 class="girl"  女生图标
+                 -->
+                    <li class="mui-table-view-cell mui-media "><label><input class="check" type="checkbox" value="2627" name="stu" style="display: none;"><div class="content"><div class="mui-media-object mui-pull-left"><img src="../Images/user_head.png"></div><div class="mui-media-body"><div class="mui-clearfix"><span class="mui-pull-left">买买帝</span><span class="mui-pull-left sex"></span></div><p class="mui-ellipsis">2006.10.11</p></div></div></label></li><li class="mui-table-view-cell mui-media "><label><input class="check" type="checkbox" value="16083" name="stu" style="display: none;"><div class="content"><div class="mui-media-object mui-pull-left"><img src="../Images/user_head.png"></div><div class="mui-media-body"><div class="mui-clearfix"><span class="mui-pull-left">李凯</span><span class="mui-pull-left sex"></span></div><p class="mui-ellipsis">2017.12.12</p></div></div></label></li><li class="mui-table-view-cell mui-media "><label><input class="check" type="checkbox" value="16086" name="stu" style="display: none;"><div class="content"><div class="mui-media-object mui-pull-left"><img src="../Images/user_head.png"></div><div class="mui-media-body"><div class="mui-clearfix"><span class="mui-pull-left">王明</span><span class="mui-pull-left sex"></span></div><p class="mui-ellipsis">2017.12.12</p></div></div></label></li>
+                </ul>
+                <!--by-student-list end  -->
+            </div>
+            <div class="close-bg"></div>
+            <div class="mui-scrollbar mui-scrollbar-vertical"><div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: block; height: 8px; transform: translate3d(0px, -8px, 0px) translateZ(0px);"></div></div></div>
+        <div id="close-left" class="by-close-left">
+            <a href="javascript:StudentSubmit();"><span class="span">确定</span></a>
+        </div>
+    </aside>
+
+    <!-- 主页面容器 -->
+    <div class="mui-inner-wrap">
+        <!--nav start-->
+        <nav class="by-bar-tab mui-bar mui-bar-tab mui-bar-bottom" style="z-index: 11;">
+            <input class="mui-btn mui-btn-primary mui-btn-block" name="cont" value="确定添加" style="background: #1583cf; color: #fff;" onclick="Submit();" type="button">
+        </nav>
+        <!--nav-end-->
+
+
+
+        <!--mui-content start-->
+        <div class="mui-content mui-scroll-wrapper" style="margin-bottom: 50px;" data-scroll="2">
+            <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                <!-- header start -->
+                <header id="header" class="by-bar-nav mui-bar mui-bar-nav">
+                    <h1 class="mui-title">添加集体班级</h1>
+
+                    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+                </header>
+                <!-- hearder end -->
+                <div class="mui-content">
+                    <!--form start-->
+                    <form id="by-form" name="register" class="mui-input-group" action="Ajax/ManagerAddCollectiveClassAjax.aspx?type=add" method="post" style="margin-top: 10px;">
+                        <input name="hidBuMenId" type="text" id="hidBuMenId" style="display: none;" value="149">
+                        <div class="mui-input-row pd">
+                            <label class="by-label">班级全称：</label>
+                            <input name="Name" type="text" id="Name" class="by-input mui-pull-right" placeholder="">
+                        </div>
+                        <div class="mui-input-row pd">
+                            <a href="#sheet1" class="mui-navigate-right ">
+                                <label class="by-label">老师名称：</label>
+                                <input name="Teacher" type="text" id="Teacher" class="by-input mui-pull-right sheet1" placeholder="" value="索菲">
+                                <input name="hidenvalue1" type="text" id="hidenvalue1" style="display: none;" value="170">
+                            </a>
+                        </div>
+                        <div class="mui-input-row pd">
+                            <a href="#sheet2" class="mui-navigate-right ">
+                                <label class="by-label">对应课程：</label>
+                                <input name="Course" type="text" id="Course" class="by-input mui-pull-right  sheet2" placeholder="" value="绘画">
+                                <input name="hidenvalue2" type="text" id="hidenvalue2" style="display: none;" value="43">
+                            </a>
+                        </div>
+                        <div class="mui-input-row pd">
+                            <a href="#my-student" class="mui-navigate-right ">
+                                <label class="by-label">学生选择：</label>
+                                <input name="StudentText" type="text" id="StudentText" class="by-input mui-pull-right" placeholder="">
+                                <input name="hidStduentId" type="text" id="hidStduentId" style="display: none;">
+                            </a>
+                        </div>
+                        <!--nav start-->
+
+                        <!--nav-end-->
+                    </form>
+                    <!--form end-->
+                </div>
+            </div>
+            <div class="mui-scrollbar mui-scrollbar-vertical"><div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: block; height: 8px; transform: translate3d(0px, -8px, 0px) translateZ(0px);"></div></div></div>
+    </div>
+</div>
+
+<!--mui-content end-->
+<!--教师选择 start-->
+<div id="sheet1" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+    <div class="by-sheet-content">
+        <a href="#sheet1" class="close">
+            <img src="../Images/add_ico.png"></a>
+
+        <!-- mui-scroll-wrapper start -->
+        <div class="mui-scroll-wrapper" style="height: 100%; padding-bottom: 60px;" data-scroll="3">
+            <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                <div class="title">请选择授课教师</div>
+                <!-- 搜索 start-->
+                <div class="mui-input-row mui-search" style="margin: 10px 15px 0;">
+                    <input id="SearchTeacher" type="search" class="mui-input-clear" placeholder="" data-input-clear="14" data-input-search="14"><span class="mui-icon mui-icon-clear mui-hidden"></span><span class="mui-placeholder"><span class="mui-icon mui-icon-search"></span><span>搜索</span></span>
+                </div>
+                <!-- 搜索 end -->
+
+                <ul class="mui-table-view" style="background: #fff;" id="Teacherul">
+                    <li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="170" style="display:none;" checked=""><div class="txt">索菲</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="171" style="display:none;"><div class="txt">安安</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="191" style="display:none;"><div class="txt">朵拉</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="192" style="display:none;"><div class="txt">萧萧</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="193" style="display:none;"><div class="txt">大海</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="243" style="display:none;"><div class="txt">陈浩</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="457" style="display:none;"><div class="txt">王静</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="458" style="display:none;"><div class="txt">郝志荣</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="459" style="display:none;"><div class="txt">李蓓</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="460" style="display:none;"><div class="txt">林艺慧</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="461" style="display:none;"><div class="txt">柳莎莎</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="462" style="display:none;"><div class="txt">秦阿妮</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="463" style="display:none;"><div class="txt">郭凯</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="464" style="display:none;"><div class="txt">马丽</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="465" style="display:none;"><div class="txt">胡可娜</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="466" style="display:none;"><div class="txt">王晓静</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="467" style="display:none;"><div class="txt">李树琦</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="468" style="display:none;"><div class="txt">金家建</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="469" style="display:none;"><div class="txt">刘鸿雁</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="470" style="display:none;"><div class="txt">陈亮</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="471" style="display:none;"><div class="txt">孔令宇</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="472" style="display:none;"><div class="txt">杜长春</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="473" style="display:none;"><div class="txt">彭婧</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="474" style="display:none;"><div class="txt">刘昆</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="475" style="display:none;"><div class="txt">李丹阳</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="476" style="display:none;"><div class="txt">刘志连</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="477" style="display:none;"><div class="txt">林大翔</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="478" style="display:none;"><div class="txt">王沁雪</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="479" style="display:none;"><div class="txt">乜清心</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="480" style="display:none;"><div class="txt">申露宇</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="481" style="display:none;"><div class="txt">马琳</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="562" style="display:none;"><div class="txt">MartinPan</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="722" style="display:none;"><div class="txt">雷洪</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="1593" style="display:none;"><div class="txt">tx</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="1632" style="display:none;"><div class="txt">明老师</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="1823" style="display:none;"><div class="txt">刘某某</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="2340" style="display:none;"><div class="txt">丁丽娟</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="3020" style="display:none;"><div class="txt">张三</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="teacher" value="3784" style="display:none;"><div class="txt">罗小</div></label></li>
+                </ul>
+            </div>
+            <div class="mui-scrollbar mui-scrollbar-vertical"><div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: block; height: 8px; transform: translate3d(0px, -8px, 0px) translateZ(0px);"></div></div></div>
+        <!-- mui-scroll-wrapper end -->
+    </div>
+
+    <!--nav start-->
+    <nav class="by-bar-tab mui-bar mui-bar-tab">
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+    </nav>
+    <!--nav-end-->
+</div>
+<!--教师选择 end-->
+<!--课程选择 start-->
+<div id="sheet2" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+    <div class="by-sheet-content">
+        <a href="#sheet2" class="close">
+            <img src="../Images/add_ico.png"></a>
+        <!-- mui-scroll-wrapper start -->
+        <div class="mui-scroll-wrapper" style="height: 100%; padding-bottom: 60px;" data-scroll="4">
+            <div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
+                <div class="title">请选择对应课程</div>
+                <ul class="mui-table-view" style="background: #fff;">
+                    <li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="course" value="43" style="display:none;" checked=""><div class="txt">绘画</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="course" value="314" style="display:none;"><div class="txt">zjp</div></label></li><li class="mui-table-view-cell"><label class="label"><input class="check" type="radio" name="course" value="680" style="display:none;"><div class="txt">钢琴基础1</div></label></li>
+                </ul>
+            </div>
+            <div class="mui-scrollbar mui-scrollbar-vertical"><div class="mui-scrollbar-indicator" style="transition-duration: 0ms; display: block; height: 8px; transform: translate3d(0px, -8px, 0px) translateZ(0px);"></div></div></div>
+        <!-- mui-scroll-wrapper end -->
+    </div>
+
+    <!--nav start-->
+    <nav class="by-bar-tab mui-bar mui-bar-tab">
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+    </nav>
+    <!--nav-end-->
+</div>
+<!--课程选择 end-->
+<!-- common js start-->
+<script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="../Scripts/mui.min.js" type="text/javascript"></script>
+<script src="../Scripts/public.js" type="text/javascript"></script>
+<!-- common js end-->
+<script>
+    $(function () {
+        /*阻止浏览器回弹的*/
+        document.querySelector('body').addEventListener('touchmove', function (ev) {
+            ev.preventDefault();
+        });
+        /*阻止手势侧滑*/
+        stopPro();
+        /*关闭侧滑*/
+        mui("#close-left")[0].addEventListener('tap', function () {
+            var sele = mui('.by-cell-swipe .mui-table-view-cell.mui-selected')[0];
+            mui('.mui-off-canvas-wrap').offCanvas().close();
+            setTimeout(function () {
+                mui.swipeoutClose(sele);
+            }, 0);
+        })
+        /**
+         * 底部弹出层
+         * */
+        mui('.by-action-sheet').on('tap', '.mui-btn', function () {
+            var self = $(this);
+            var id = self.parents('.by-action-sheet').attr('id');
+            var check = self.parents('.by-action-sheet').find('.check:checked');
+            var arr = [];
+            var arrid = [];
+            check.each(function () {
+                arrid.push($(this).val());
+                arr.push($(this).siblings('.txt').text());
+            });
+            arr = arr.join(',');
+            arrid = arrid.join(',');
+            if (arr.length != 0) {
+                $('.' + id).val(arr);
+                $("#hidenvalue" + id.replace("sheet", "")).val(arrid);
+                //对应课程
+                if (id = "sheet2") {
+                    var bid = '149';
+                    var classid = arrid;
+                    $.ajax({
+                        url: '/Teacher/Ajax/ManagerAddCollectiveClassGetAjax.aspx?BuMenId=' + bid + "&ClassId=" + classid + "&type=getStudent",
+                        success: function (data) {
+                            $("#Studentul").html(data);
+                            $("#StudentText").val("");
+                            $("#hidStduentId").val("");
+                        }
+                    })
+                }
+            }
+            mui('.by-action-sheet').popover('hide');
+        })
+        //学生搜索
+        $("#SrarchStudent").keyup(function () {
+            var tname = $("#SrarchStudent").val();
+            var ClassId = $("#hidenvalue2").val();
+            var bid = '149';
+            $.ajax({
+                url: '/Teacher/Ajax/ManagerAddCollectiveClassGetAjax.aspx?BuMenId=' + bid + '&ClassId=' + ClassId + '&KeyWord=' + tname + "&type=getStudent",
+                success: function (data) {
+                    $("#Studentul").html(data);
+                }
+            })
+        })
+
+        //老师搜索时返回值
+        $("#SearchTeacher").keyup(function () {
+            var tname = $("#SearchTeacher").val();
+            var bid = '149';
+            $.ajax({
+                url: '/Teacher/Ajax/ManagerAddCollectiveClassGetAjax.aspx?BuMenId=' + bid + '&KeyWord=' + tname + "&type=getTeacher",
+                success: function (data) {
+                    $("#Teacherul").html(data);
+                }
+            })
+        })
+    })
+    ///提交
+    function Submit() {
+        var name = $("#Name").val();
+        if (name == null || name == "") {
+            mui.toast('名称不能为空', { duration: 'short', type: 'div' });
+            return;
+        }
+        var teacherName = $("#hidenvalue1").val();
+        if (teacherName == null || teacherName == "") {
+            mui.toast('请选择老师', { duration: 'short', type: 'div' });
+            return;
+        }
+        var info = $("#hidenvalue2").val();
+        if (info == null || info == "") {
+            mui.toast('请选择课程', { duration: 'short', type: 'div' });
+            return;
+        }
+        var studentid = $("#hidStduentId").val();
+        if (studentid == null || studentid == "") {
+            mui.toast('请选择学生', { duration: 'short', type: 'div' });
+            return;
+        }
+        document.register.cont.value = '正在提交,请等待...';
+        document.register.cont.disabled = true;
+        $("#by-form").submit();
+    }
+
+
+    function StudentSubmit() {
+        var svalue = [];
+        var check = $(".by-student-list").find('.check:checked');
+        check.each(function () {
+            svalue.push($(this).val());
+        });
+
+        var sname = "共计" + svalue.length + "人";
+        $("#StudentText").val(sname);
+        $("#hidStduentId").val(svalue);
+    }
+</script>
+
+
+</body></html>

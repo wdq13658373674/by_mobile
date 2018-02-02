@@ -1,0 +1,44 @@
+/*学生个人中心*/
+.mui-table-view:before{height:0;}
+.mui-card-footer:before, .mui-card-header:after{height:0;}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell{padding:0px 15px;}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell>a:not(.mui-btn) {padding:0;margin: 0;font-size: 0.6rem;}
+
+.by-header-box.mui-card{margin:0px !important;border-bottom:0px;}
+.by-header-box .mui-card-header{padding-left:0px; padding-right:0px;border-bottom:0px;background-image:linear-gradient(right top,#7cb2ff, #5c98ee);background-image:-webkit-linear-gradient(225deg, #7cb2ff, #5c98ee);}
+.by-header-box .mui-card-content{border-bottom:0px;}
+.by-header-box .mui-card-content-inner{padding:0px; border-bottom:0px;}
+.by-header-box .round{margin-top: -50px;}
+.by-header-box .round img{border-radius: 100%;width: 6rem;height:6rem;}
+.by-header-box .head-img{text-align: center; margin-top:2rem;}
+.by-header-box .head-circle{text-align: center; text-align: center;margin-top: -7rem;transform: scale(1.25,1.25);-ms-transform: scale(1.25,1.25);-webkit-transform: scale(1.25,1.25);}
+.by-header-box .nickname{color: #fff; text-align:center; margin-top:20px; margin-bottom:0px;}
+.by-header-box .line{text-align: center;transform: scale(0.25,0.25); -ms-transform: scale(0.25,0.25);-webkit-transform: scale(0.25,0.25);margin-bottom:0px;}
+
+.by-class-list .mui-table-view-cell{padding:5px 15px;padding-right:0px;}
+.by-class-list .mui-table-cell{display:block;}
+.by-class-list .date{height:2rem; color:#1583cf;}
+.by-class-list .month{float:left;font-size: 0.8rem;line-height:14px;}
+.by-class-list .day{font-size:32px; font-weight:bold; margin-left:3rem;margin-top:3px;}
+.by-class-list .mui-badge{background: #5f9bf0; color: #fff; margin-left:20px;padding: 0.3rem 1rem;margin-top:3px;}
+.by-class-list .class{font-size:14px;}
+.by-class-list .name{margin-left:28px;height:20px;line-height:20px;}
+.by-class-list .address{margin-left:28px;font-size:12px;}
+.by-class-list .t{float:right;padding:8px 10px; background:#1583cf;border-top-left-radius:8px;border-bottom-left-radius:8px; color:#fff;}
+.by-class-list .t .time{font-size:1.5rem;}
+.by-class-list .t .phone{font-size:0.8rem; margin-top:0.2rem;}
+.by-class-list .t .img{margin-top:0.3rem; float:left;}
+.by-class-list .t .name{margin-top:0.2rem; margin-left:0.6rem; float:left;}
+.by-class-list .mui-table-view-cell.mui-selected .t{display:none;}
+
+/*Todo 状态说明：
+       说明：添加 class="disable" 显示灰色
+*/
+.by-class-list .mui-table-view-cell.disable .date{color:#c7c7cc;}
+.by-class-list .mui-table-view-cell.disable .mui-badge{background:#c7c7cc;}
+.by-class-list .mui-table-view-cell.disable .t{background:#c7c7cc;}
+
+.by-class-list .mui-table-view-cell>.mui-slider-right>.mui-btn{
+    font-size:14px;
+    padding:0 10px;
+}

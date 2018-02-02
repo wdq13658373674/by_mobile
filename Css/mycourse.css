@@ -1,0 +1,13 @@
+/* 教师我的课程3 */
+.mui-popover.by-action-sheet{height:60%;background: #fff;}
+.mui-popover.by-action-sheet .mui-table-view{margin:0;border-radius:0;text-align: left;color:#333;}
+.mui-popover.by-action-sheet .mui-table-view .mui-table-view-cell{padding:0;}
+
+.by-action-sheet .by-sheet-content{width:100%;border:1px solid #fff;}
+.by-action-sheet .by-sheet-content .close{position:relative;z-index:999;display:block;width:100%;text-align: center;margin-top:-17px;}
+.by-action-sheet .by-sheet-content .close img{width:34px;height:34px;}
+.by-sheet-content .title{color:#333;margin:29px 0;font-size:15px;text-align: center;}
+.by-sheet-content .label{display:block;padding:11px 15px;}
+.by-sheet-content .check:checked + .txt{color:#1583cf;background: url('../Images/suc.png') right center no-repeat;background-size: auto 80%;}
+
+ .by-course-list .mui-media-body{text-align: right;padding:0 20px;}

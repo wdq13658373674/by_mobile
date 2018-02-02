@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>学校-我的课程3</title>
+    <!--common css-->
+    <link rel="stylesheet" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+
+    <!--date css -->
+    <link rel="stylesheet" type="text/css" href="../Css/mui.picker.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/mui.dtpicker.css" />
+
+    <!--独立 css-->
+    <link rel="stylesheet" type="text/css" href="../css/mycourse.css"/>
+</head>
+<body>
+    <!-- 菜单具体展示内容 -->
+    <header id="header" class="by-transparent-bar mui-bar mui-bar-transparent">
+        <a href="javascript:history.go(-1)" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a href="javascript:void(0);" id="finish" class="mui-btn-link mui-pull-right" style="font-size:13px;width:50px;text-align: center;">完成</a>
+    </header>
+    <div class="mui-content" style="background: #fff;">
+        <!--日历 start-->
+        <div id="by-date-picker" class="by-date-picker"></div>
+        <!--日历 end-->
+
+       <ul class="by-course-list mui-table-view" style="margin-top:0;">
+           <li class="mui-table-view-cell mui-media">
+               <a href="javascript:void(0);" data-options='{"type":"date"}'  class="mui-navigate-right select-date">
+                   <div class="mui-pull-left">日期：</div>
+                   <div class="mui-media-body">
+                       <p id="select-date"  class='mui-ellipsis'>2017.08.15</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a href="#sheet2"  class="mui-navigate-right">
+                   <div class="mui-pull-left">班级：</div>
+                   <div class="mui-media-body">
+                       <p class='mui-ellipsis sheet2'>张小</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a href="#sheet1"  class="mui-navigate-right">
+                   <div class="mui-pull-left">教室：</div>
+                   <div class="mui-media-body">
+                       <p class='mui-ellipsis sheet1'>贝多芬</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a href="#sheet4">
+                   <div class="mui-pull-left">课程：</div>
+                   <div id="course" class="mui-media-body" style="padding-right:0;">
+                       <p class='mui-ellipsis sheet4'>索菲琴行小提琴一对一  (50分钟)</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a href="javascript:;"  class="mui-navigate-right">
+                   <div class="mui-pull-left">教师：</div>
+                   <div class="mui-media-body">
+                       <p class='mui-ellipsis'>网易</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a href="#sheet3"  class="mui-navigate-right">
+                   <div class="mui-pull-left">重复：</div>
+                   <div class="mui-media-body">
+                       <p class='mui-ellipsis sheet3'>当日</p>
+                   </div>
+               </a>
+           </li>
+           <li class="mui-table-view-cell mui-media">
+               <a>
+                   <div class="mui-pull-left">停课：</div>
+                  <div class="mui-switch mui-switch-mini mui-pull-right">
+                    <div class="mui-switch-handle"></div>
+                  </div>
+               </a>
+           </li>
+       </ul>
+        <!-- by-course-list end -->
+    </div>
+
+    <!--教室选择 start-->
+    <div id="sheet1" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+        <div class="by-sheet-content">
+            <a href="#sheet1" class="close"><img src="../Images/add_ico.png"></a>
+            
+            <!-- mui-scroll-wrapper start -->
+            <div class="mui-scroll-wrapper" style="height:100%;padding-bottom: 60px;">
+                <div class="mui-scroll">
+                    <div class="title">请选择排课的教室</div>
+                    <ul class="mui-table-view" style="background:#fff;">
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="音乐厅" style="display:none;">
+                                <div class="txt">音乐厅</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="主持室" style="display:none;">
+                                <div class="txt">主持室</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="贝多芬" style="display:none;">
+                                <div class="txt">贝多芬</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="音乐厅" style="display:none;">
+                                <div class="txt">音乐厅</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="主持室" style="display:none;">
+                                <div class="txt">主持室</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="音乐厅" style="display:none;">
+                                <div class="txt">音乐厅</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="class" value="主持室" style="display:none;">
+                                <div class="txt">主持室</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mui-scroll-wrapper end -->
+        </div>
+
+        <!--nav start-->
+        <nav class="by-bar-tab mui-bar mui-bar-tab">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+        </nav>
+        <!--nav-end-->
+    </div>
+    <!--教室选择 end-->
+
+    <!--班级选择 start-->
+    <div id="sheet2" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+        <div class="by-sheet-content">
+            <a href="#sheet2" class="close"><img src="../Images/add_ico.png"></a>
+            <!-- mui-scroll-wrapper start -->
+            <div class="mui-scroll-wrapper" style="height:100%;padding-bottom: 60px;">
+                <div class="mui-scroll">
+                    <div class="title">请选择排课班级学生</div>
+                    <!-- 搜索 start-->
+                    <div class="mui-input-row mui-search" style="margin:10px 15px 0;">
+                        <input type="search" class="mui-input-clear" placeholder="搜索">
+                    </div>
+                    <!-- 搜索 end -->
+                    <ul class="mui-table-view" style="background:#fff;">
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="student" value="王晓" style="display:none;">
+                                <div class="txt">王晓</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="student" value="王俊凯" style="display:none;">
+                                <div class="txt">王俊凯</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="radio" name="student" value="贝多芬" style="display:none;" checked>
+                                <div class="txt">贝多芬</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mui-scroll-wrapper end -->
+        </div>
+
+        <!--nav start-->
+        <nav class="by-bar-tab mui-bar mui-bar-tab">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+        </nav>
+        <!--nav-end-->
+    </div>
+    <!--班级选择 end-->
+
+    <!--重复选择 start-->
+    <div id="sheet3" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+        <div class="by-sheet-content">
+            <a href="#sheet3" class="close"><img src="../Images/add_ico.png"></a>
+            
+            <!-- mui-scroll-wrapper start -->
+            <div class="mui-scroll-wrapper" style="height:100%;padding-bottom: 60px;">
+                <div class="mui-scroll">
+                    <div class="title">请选择排课重复时间</div>
+                    <ul class="mui-table-view" style="background:#fff;">
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周日" style="display:none;">
+                                <div class="txt">每周日</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周一</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周二" style="display:none;">
+                                <div class="txt">每周二</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周三</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周四</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周五</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周六</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mui-scroll-wrapper end -->
+        </div>
+
+        <!--nav start-->
+        <nav class="by-bar-tab mui-bar mui-bar-tab">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+        </nav>
+        <!--nav-end-->
+    </div>
+    <!--重复选择 end-->
+
+    <!--课程选择 start-->
+    <div id="sheet4" class=" mui-popover mui-popover-bottom mui-popover-action by-action-sheet">
+        <div class="by-sheet-content">
+            <a href="#sheet3" class="close"><img src="../Images/add_ico.png"></a>
+
+            <!-- mui-scroll-wrapper start -->
+            <div class="mui-scroll-wrapper" style="height:100%;padding-bottom: 60px;">
+                <div class="mui-scroll">
+                    <div class="title">请选择课程</div>
+                    <ul class="mui-table-view" style="background:#fff;">
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周日" style="display:none;">
+                                <div class="txt">每周日</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周一</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周二" style="display:none;" checked>
+                                <div class="txt">每周二</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周一</div>
+                            </label>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label class="label">
+                                <input class="check" type="checkbox" name="time" value="每周一" style="display:none;">
+                                <div class="txt">每周一</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mui-scroll-wrapper end -->
+        </div>
+
+        <!--nav start-->
+        <nav class="by-bar-tab mui-bar mui-bar-tab">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-block">确定</button>
+        </nav>
+        <!--nav-end-->
+    </div>
+    <!--课程选择 end-->
+
+    <!--common js start-->
+    <script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/mui.min.js" type="text/javascript"></script>
+    <script src="../Scripts/public.js" type="text/javascript"></script>
+    <!--common js end-->
+
+    <!--date js-->
+    <script src="../Scripts/mui.picker.all.js"></script>
+    <script>
+        $(function(){
+            /**
+             * 时分
+             * */
+            var timeHour=0,timeMinute=0;//小时，分钟全局变量
+            var myPicker=new mui.DtPicker({
+                'type' : 'time'
+            });
+            myPicker.show(function(rs){
+                timeHour = rs.h.text;//小时
+                timeMinute = rs.i.text;//分钟
+            });
+            $('.mui-backdrop').remove();
+
+           /**
+            * 底部弹出层
+            * */
+            mui('.by-action-sheet').on('tap','.mui-btn',function(){
+                var self = $(this);
+                var id = self.parents('.by-action-sheet').attr('id');
+                var check = self.parents('.by-action-sheet').find('.check:checked');
+                var arr = [];
+
+                check.each(function(){
+                    arr.push($(this).siblings('.txt').text());
+                });
+                arr = arr.join(',');
+                if(arr.length != 0){
+                    $('.' + id).text(arr);
+
+                    //班级
+                    if(id == 'sheet2'){
+                        //ajax
+                        var trFinish=mui('#finish')[0];
+                        mui.trigger(trFinish,'tap');
+                        console.log(timeHour,timeMinute);
+                    }
+
+                    //教室
+                    if(id == 'sheet1'){
+                        //ajax
+                    }
+                }
+                //关闭弹窗
+                mui('.by-action-sheet').popover('hide');
+            })
+
+            /**
+             * 日期年月日控件
+             * */
+            var date = mui('.select-date');
+            var input = document.getElementById('select-date');
+            input.innerHTML = timeNow();
+            date.each(function(){
+                this.addEventListener('tap', function() {
+                     var self = this;
+                    if(self.picker) {
+                        self.picker.show(function (rs) {
+                            input.innerHTML = rs.y.text + '.' + rs.m.text + '.' + rs.d.text;//获取年月日
+                            getDay(input.innerHTML);
+                            /*释放*/
+                            self.picker.dispose();
+                            self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        self.picker = new mui.DtPicker(options);
+
+                        self.picker.show(function(rs) {
+                            input.innerHTML = rs.y.text + '.' + rs.m.text + '.' + rs.d.text;//获取年月日
+                            getDay(input.innerHTML);
+                            /*释放*/
+                            self.picker.dispose();
+                            self.picker = null;
+                        });
+                    }
+
+                }, false);
+            })
+
+            /**
+             * 获取当前周几
+             * */
+            getDay();
+            function getDay(date){
+                var nowDay = new Date();
+                if(date){
+                    nowDay = new Date(date);
+                }
+                var weekDay = nowDay.getDay();
+
+                var radio = $('#sheet3 .check');
+                radio.attr('checked',false);
+                radio.eq(weekDay).attr('checked',true);
+            }
+
+            /**
+             * 获取当前时间
+             * */
+            function timeNow(){
+                var myDate = new Date();
+                var year=myDate.getFullYear();
+                var month=myDate.getMonth()+1;
+                var date=myDate.getDate();
+                var now=year+'.'+p(month)+"."+p(date);
+
+                //格式化时间
+                function p(s) {
+                    return s < 10 ? '0' + s: s;
+                }
+                return now;
+            }
+        })
+    </script>
+</body>
+</html>

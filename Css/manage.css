@@ -1,0 +1,53 @@
+/*店长课程管理*/
+#by-form{background: none;}
+#by-form .mui-input-row{height:auto;background: #fff;}
+#by-form .by-input{height:50px;}
+#by-form #change-course .by-input{height:58px;}
+#by-form .by-label{color:#333333;font-size:15px;padding:17px 15px;}
+#by-form .by-input{color:#666666;font-size:15px;text-align: right;width:55%;}
+#by-form .mui-icon{margin-right:5px;}
+#by-form .mui-input-row label{width:45%;}
+
+.by-img-tit{margin-top:10px;height:46px;font-size:15px;line-height:46px;background: #fff;padding:0 15px;}
+.by-upload{background: #fff;padding:0 15px 15px;}
+.by-upload .label{position:relative;margin-right:10px;text-align:center;display:inline-block;width:86px;height:86px;background: url('../Images/upload.png') no-repeat;background-size:100% 100%;}
+.by-upload .txt{position: absolute;bottom:0;left:0;right:0;font-size:12px;color:#999999;}
+.by-upload .upload-img{display:none;position:absolute;top:0;left:0;width:100%;height:100%;overflow: hidden;border:1px solid #e5e5e5;}
+
+/*店长个人中心*/
+.mui-grid-view.mui-grid-9 .mui-table-view-cell{padding:0px 15px;}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell>a:not(.mui-btn) {padding:0;margin: 0;font-size: 0.6rem;}
+
+.by-user-box .user-head{margin:37px auto 0;width:111px;height:118px;background: url("../Images/circle_line_gray.png") no-repeat;background-size:100% 100%;}
+.by-user-box .user-head .img{width:94px;height:94px;border-radius: 50%;-webkit-border-radius: 50%;margin:13px 6px;}
+.by-user-box .nickname{text-align: center;font-size:16px;margin-top:15px;}
+.by-user-box .line{height:4px;background: url("../Images/line_gray.png") center no-repeat;background-size:auto 100%; }
+
+.by-dragLeft-menu .mui-navigate-right{font-size:15px;}
+.by-dragLeft-menu .menu-icon{float:left;width:20px;height:auto;vertical-align: middle;margin-right:18px;}
+
+.by-header-box.mui-card{margin:0px !important;border-bottom:0px;}
+.by-header-box .mui-card-header{padding-left:0px; padding-right:0px;border-bottom:0px;background-image:linear-gradient(right top,#7cb2ff, #5c98ee);background-image:-webkit-linear-gradient(225deg, #7cb2ff, #5c98ee);}
+.by-header-box .mui-card-content{border-bottom:0px;}
+.by-header-box .mui-card-content-inner{padding:0px; border-bottom:0px;}
+.by-header-box .round{margin-top: -50px;}
+.by-header-box .round img{border-radius: 100%;width: 6rem;height:6rem;}
+.by-header-box .head-img{text-align: center; margin-top:2rem;}
+.by-header-box .head-circle{text-align: center; text-align: center;margin-top: -7rem;transform: scale(1.25,1.25);-ms-transform: scale(1.25,1.25);-webkit-transform: scale(1.25,1.25);}
+.by-header-box .nickname{color: #fff; text-align:center; margin-top:20px; margin-bottom:0px;}
+.by-header-box .line{text-align: center;transform: scale(0.25,0.25); -ms-transform: scale(0.25,0.25);-webkit-transform: scale(0.25,0.25);margin-bottom:0px;}
+.by-header-box .mui-badge{background:#7aacf4; border:1px solid #feffff;font-size:0.7rem; padding: 0.3rem 0.8rem;}
+
+.by-head-menu.mui-table-view{background:#fff; border-top:0px; padding-bottom:0.2rem; margin-top:-2.1rem;}
+.by-head-menu.mui-grid-9 .mui-table-view-cell{border-bottom:0px; border-top:0px;}
+.by-head-menu .tit{font-size:1.5rem;}
+.by-head-menu .con{color:#b3b3b3;}
+
+.by-menu-box{margin-top:15px;padding:0 0 15px 15px;background: #fff;}
+.by-menu-box .content{border:1px solid #f0f0f0;border-radius:5px;margin-right:15px;margin-top:15px;overflow: hidden;-webkit-box-shadow:  4px 5px 10px #f0f0f0;}
+.by-menu-box .mui-media-body{font-size:15px;}
+.by-menu-box .mui-media-body p{font-size:12px;}
+.by-menu-box .mui-table-view .mui-media-object {line-height: 35px;max-width: 35px;height: 35px;}
+.by-menu-box .btn{height:65px;line-height:65px;display: block;text-align: center;}
+.by-menu-box .btn .mui-badge{width:100px;padding:6px 0;border: 1px solid #1683cf;color: #1683cf;background: #fff;font-size:14px;text-align: center;}
+.by-menu-box .btn .mui-badge:active{background: #f0f0f0;}

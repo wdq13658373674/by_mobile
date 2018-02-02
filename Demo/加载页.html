@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>加载页面</title>
+    <!--common css-->
+    <link rel="stylesheet" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+</head>
+<body style="background:#f7f8fc;">
+<style>
+
+</style>
+<div class="loading" data-loading-icon="mui-spinner mui-spinner-custom" data-loading-text="加载中..."></div>
+
+<!-- common js start-->
+<script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="../Scripts/mui.min.js" type="text/javascript"></script>
+<script src="../Scripts/public.js" type="text/javascript"></script>
+<!-- common js end-->
+
+<script>
+    $(function(){
+        /*启动加载*/
+        mui('.loading').button('loading');
+
+        /*模拟数据加载延迟*/
+        setTimeout(function(){
+            mui('.loading').button('reset');//关闭加载
+        },1000);
+    })
+</script>
+</body>
+</html>
